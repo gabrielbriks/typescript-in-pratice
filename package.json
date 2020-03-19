@@ -1,0 +1,9 @@
+{
+  "name": "typescript-with-node",
+  "version": "1.0.0",
+  "description": "Exemple pratic of nodeJS with typescript",
+  "main": "index.js",
+  "repository": "https://github.com/gabrielbriks/typescript-with-node.git",
+  "author": "Gabriel Reis Morais <greis9010@gmail.com>",
+  "license": "MIT"
+}
