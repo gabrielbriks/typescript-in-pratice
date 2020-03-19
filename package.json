@@ -5,5 +5,12 @@
   "main": "index.js",
   "repository": "https://github.com/gabrielbriks/typescript-with-node.git",
   "author": "Gabriel Reis Morais <greis9010@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/express": "^4.17.3",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

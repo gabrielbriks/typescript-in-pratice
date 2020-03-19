@@ -1,0 +1,26 @@
+Iniciando ambiente:
+
+- Install typescript in enviorment of developement: "yarn add -D typescript"
+- Install express and create a sever with express of form defalult: "yarn add express" 
+
+- Add new folder with name "src";
+    - Add new file with name index.ts;(utilizando o '.ts' devido ao typescript)
+        .. O legal de utilizar o typescript, é que conseguimos utilizar todas as features mais 
+            recentes do javascript.
+        .. Para conseguimos utilizar o auto completation e as tipagens das bibliotecas, devemos 
+            instalar esse package de types da biblioteca em questão. Por exemplo 
+        .. Como o próprio Node não consegue interpretar o typescript utilizamos uma propiedade
+            que já veio instalado com o typescript, que é o "tsc". Utilizando ele será possível 
+            startar a incialização do nosso 'index.ts', que irá realizar a conversão do código 
+            para 'js'. 
+            Comand >> yarn tsc src/index.ts
+
+            Depois de realizar o comando acima, é possível observar que um novo file index será
+            criado agora com a extensão 'js'. Sendo assim agora basta rodar o 'node' com ele e
+            todo o nosso código irá funcionar de modo perfect. 
+
+    - Configuration of file 'tsconfig.jon'
+        - Para adicionar esse arquivo iremos rodar o seguinte comando: 
+            Comand>> yarn tsc --init
+            .. Com isso podemos tirar o '*' lá do nosso import, e irá 
+stop time: 19:22
