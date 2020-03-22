@@ -13,7 +13,7 @@ Iniciando ambiente:
             que já veio instalado com o typescript, que é o "tsc". Utilizando ele será possível 
             startar a incialização do nosso 'index.ts', que irá realizar a conversão do código 
             para 'js'. 
-            Comand >> yarn tsc src/index.ts
+            Comand >> yarn tsc src/index.ts 
 
             Depois de realizar o comando acima, é possível observar que um novo file index será
             criado agora com a extensão 'js'. Sendo assim agora basta rodar o 'node' com ele e
@@ -23,4 +23,48 @@ Iniciando ambiente:
         - Para adicionar esse arquivo iremos rodar o seguinte comando: 
             Comand>> yarn tsc --init
             .. Com isso podemos tirar o '*' lá do nosso import, e irá 
-stop time: 19:22
+        -  Logo em seguida podemos utilizar o comando >> "yarn tsc", que irá converter todos
+            os arquivos para '.js'
+
+        - Configurations Importants for we
+            - 'outDir': Aqui podemos dizer onde que irá ficar localizado o nosso código
+                transpilado. 
+                Por exemplo: "outDir": "./dist",
+                    - No exemplo acima podemos dizer que todo o nosso código transpilado irá
+                        ficar dentro de uma pasta chamada 'dist' que está localizada na raiz
+                        do nosso diretório.  
+
+                - Depois de ativarmos essa configuração, rodamos novamente o comando >> 'yarn tsc'
+                    e além do nosso arquivo 'js' ele irá tambem criar o diretório que definimos
+                    lá na config.
+                
+    - Creating a flux of developement 
+        - Vou criar um fluxo de desenvolvimento para que eu não fique toda hora executando esse
+            comando de transpilação do código para conseguir ver as alteralções, pois com esse 
+            fluxo implementando ele irá realizar a transpilação automaticamente a cada alteração
+            feita em nossos arquivos.
+        - Para isso poderiamos usar o "sucrase", mas como iremos utilizar uma funcionalidade do ts
+        chamada "Decorators", o sucrase ainda nao tem suporte para essa funcionalidade. Sendo assim 
+        irei utilizar o "ts-node-dev". 
+            - Para a instalação dele execute o seguinte comando >> "yarn add ts-node-dev -D"
+            - Após concluir a instalação irei adicionar em no package.json uma aba scripts, e 
+                dentro dela adiciono o seguinte: "dev:server": "ts-node-dev --respawn -- scr/index.ts"
+                .. As duas flags que adicionei tem a seguinte função:  
+                    *  --transpileOnly: estou dizendo que não quero que verifique se o código ts está
+                        ou não certo para a transpilação, apenas quero que transpile, pois a correção
+                        de sintax ja será possivel realizar pelo o próprio vsCode.
+            - Depois executo o comando para rodar a transpilação com o ts-node-dev >>  "yarn dev:server"
+    
+    - Para fechar iremos instalar o CORS, e não podemos esquecer de instalar também o seus types.
+        Comand >> "yarn add cors @types/cors"  
+        Depois de instalado adicione no index.ts, e dê o 'use' antes das routes.
+    
+
+# Creating Project front-end
+
+- Executei o comando abaixo para dar inicio ao desenvolvimento do nosso projeto front-end
+     Comand >> "yarn create react-app frontend --template=typescript"
+     .. A flag "--template=typescript" que estou utilizando, serve para que venhamos utilizar um
+        template pronto do typescript para react, que é disponibilizado pelo próprio pessoal da react-app.
+    
+
