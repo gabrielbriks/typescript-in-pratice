@@ -60,11 +60,22 @@ Iniciando ambiente:
         Depois de instalado adicione no index.ts, e dê o 'use' antes das routes.
     
 
-# Creating Project front-end
+----------------------------------------------------------
+
+# Creating Project FRONT-END
 
 - Executei o comando abaixo para dar inicio ao desenvolvimento do nosso projeto front-end
      Comand >> "yarn create react-app frontend --template=typescript"
      .. A flag "--template=typescript" que estou utilizando, serve para que venhamos utilizar um
         template pronto do typescript para react, que é disponibilizado pelo próprio pessoal da react-app.
+     .. Irei retirar alguns files que são desnecessários no momento(os de sempre).
+
+- Para iniciar então, irei instalar a dependência 'axios'.
+    Comand >> yarn add axios   
+    - Criar um folder chamado 'services' e dentro dela estabelece a 'api'.
+
+- 
+
+
     
 
